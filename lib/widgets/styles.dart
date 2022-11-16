@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
-const TextStyle AppBarTitle = TextStyle(
-    fontSize: 35, fontWeight: FontWeight.bold, color: Colors.blueAccent);
+//MARK: -APPBAR
+class Palette {
+  static const backgroundColor = Color(0xff5b89fc);
+}
+
+const TextStyle AppBarTitle =
+    TextStyle(fontSize: 45, fontWeight: FontWeight.bold, color: Colors.white);
 
 const TextStyle IsEmptyText = TextStyle(
     fontSize: 20, fontWeight: FontWeight.normal, color: Colors.white24);

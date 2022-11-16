@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  //MARK: -ROOT WIDGET
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,8 +14,18 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           //MARK: USE MATERIAL3
           useMaterial3: true,
-          primarySwatch: Colors.blue,
         ),
+        //MARK: -REMOVE DEBUG LABEL
+        debugShowCheckedModeBanner: false,
         home: HomeScreen());
   }
 }
+
+//MARK: -NONE DEBUG
+/*
+initialRoute: "/",
+  routes: <String, WidgetBuilder>{
+    "/": (BuildContext context) => HomeScreen(),
+    "/form": (BuildContext context) => FormScreen()
+  },
+*/
