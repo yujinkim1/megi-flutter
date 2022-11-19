@@ -7,7 +7,8 @@ class FormScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Palette.backgroundColor,
-          title: Text("Add", style: AppBarTitle),
+          title: Text("add", style: AppBarTitle),
+          automaticallyImplyLeading: false,
         ),
         body: ElevatedButton(
             onPressed: () {

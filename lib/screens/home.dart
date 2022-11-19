@@ -8,13 +8,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        backgroundColor: Palette.backgroundColor,
-        toolbarHeight: 150,
+        backgroundColor: Color.fromRGBO(91, 137, 252, 1),
         title: Text(
           "List",
           style: AppBarTitle,
         ),
       ),
+      //MARK: -DATE OF WEEK PICKER
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
@@ -26,6 +26,24 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: Palette.backgroundColor,
       ),
+      body: Column(mainAxisSize: MainAxisSize.max, children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 1,
+          height: MediaQuery.of(context).size.height * 0.08,
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Text("tasks"),
+          ),
+          color: Palette.backgroundColor,
+        )
+      ]),
     );
   }
 }
+//MARK: -TWEEN ANIMATION BUILDER
+/*
+TrainsitionBuilder: (context, animation, secondaryAnimation, child) {
+  const begin = Offset(0.0, 0.2, 1);
+  const end = Offset(0.0, 0.2, -1);
+}
+*/
