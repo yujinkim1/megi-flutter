@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //MARK: -APPBAR
 class Palette {
   static const backgroundColor = Color(0xff5b89fc);
+  static const error = Colors.redAccent;
 }
 
 const TextStyle AppBarTitle =
