@@ -6,30 +6,26 @@ void main() {
   runApp(MyApp());
 }
 
+///ROOT WIDGET
 class MyApp extends StatelessWidget {
-  //MARK: -ROOT WIDGET
+  //MARK: 4-ROOT WIDGET
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        //MARK: 5-REMOVE DEBUG LABEL
+        debugShowCheckedModeBanner: false,
         title: 'megi',
         theme: ThemeData(
-          //MARK: 1-USE MATERIAL3
+          //MARK: 1-USING MATERIAL3 DESIGN
           useMaterial3: true,
-          //MARK: 2-DEFINED TARGET PLATFORM
+          //MARK: 2-TARGET PLATFORM ONLY IOS(TEMPORARLIY)
           platform: TargetPlatform.iOS,
-          errorColor: Palette.error,
+          //MARK: 3-DEFINED PRIMARY COLOR SWATCH
+          colorScheme: ColorScheme.fromSwatch(
+              errorColor: Palette.errorColor,
+              cardColor: Palette.cardColor,
+              brightness: Brightness.light),
         ),
-        //MARK: 3-REMOVE DEBUG LABEL
-        debugShowCheckedModeBanner: false,
         home: HomeScreen());
   }
 }
-
-//MARK: -NONE DEBUG
-/*
-initialRoute: "/",
-  routes: <String, WidgetBuilder>{
-    "/": (BuildContext context) => HomeScreen(),
-    "/form": (BuildContext context) => FormScreen()
-  },
-*/
